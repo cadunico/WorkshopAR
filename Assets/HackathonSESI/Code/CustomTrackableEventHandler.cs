@@ -9,8 +9,8 @@ public class CustomTrackableEventHandler : MonoBehaviour,
                                             ITrackableEventHandler
 {
     private TrackableBehaviour mTrackableBehaviour;
-    public MyEventType OnFoundTrack;
-    public MyEventType OnLostTrack;
+    public CustomEventString OnFoundTrack;
+    public CustomEventString OnLostTrack;
 
     void Start()
     {
@@ -84,7 +84,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 }
 
 [Serializable]
-public class MyEventType : UnityEvent<string>
+public class CustomEventString : UnityEvent<string>
 {
 
 }
